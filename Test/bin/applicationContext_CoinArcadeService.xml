@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+     
+	<bean id='coinArcadeServiceConfigurator' class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+			</list>
+		</property>
+		<property name="order" value="1" />
+	</bean>
+	 
+   <bean id="casJDBCFramework" class="com.pg.framework.jdbc.JDBCFrameworkFactory"
+		factory-method="getFramework">
+		<constructor-arg value="CUSTOM" />
+		<constructor-arg value="pcasino" />
+	</bean>
+	
+	<!-- <bean id="casinoDBMgrPassive"
+		class="com.casino.games.db.DBManagerPassive" >
+		<property name="jdbcFramework" ref="casJDBCFramework"/>
+	</bean> -->
+	
+	<!-- <bean id="casinoCommonDBManager"
+		class="com.casino.games.db.DBManager" init-method="init">
+		<property name="jdbcFramework" ref="casJDBCFramework"/>
+		<property name="dbManagerPassive" ref="casinoDBMgrPassive" />
+	</bean> -->
+	
+	<bean id="DBConfiguration" class="com.pg.utils.Configuration" init-method="initialize">
+     <property name="configFile" value="classpath:jdbc.properties"/>
+	</bean>
+	
+  <bean id="casDBManager" class="com.pg.coinarcadeservice.db.CASDBManager" depends-on="DBConfiguration" init-method="init">
+		<property name="jdbcFramework" ref="casJDBCFramework" />
+	</bean> 
+	
+	<bean id="casinoCommonDBMgr" class="com.casino.games.db.CasinoCommonDBMgr" init-method="init">
+		<property name="jdbcFramework" ref="casJDBCFramework"/>
+	</bean>
+	
+</beans>

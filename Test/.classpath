@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/coinArcadeService-impl"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Anil.Chedepudi/OneDrive - Entain Group/Desktop/jdbcframework-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Anil.Chedepudi/Projects/GIT/Release/coinarcade/coinArcadeService-impl/build/libs/coinArcadeService-impl-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/softwares/tmp/caches/modules-2/files-2.1/com.partygaming.thirdparty/lombok/1.18.2/524e0a697e9d62950b2f763d88d35cd8dc82a9a1/lombok-1.18.2.jar"/>
+	<classpathentry kind="src" path=".apt_generated">
+		<attributes>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Anil.Chedepudi/OneDrive - Entain Group/backup/Desktop/UKGC/MGS/New folder/commons-logging-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Anil.Chedepudi/OneDrive - Entain Group/backup/Desktop/UKGC/MGS/New folder/spring-beans-3.2.17.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Anil.Chedepudi/OneDrive - Entain Group/backup/Desktop/UKGC/MGS/New folder/spring-context-3.2.17.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Anil.Chedepudi/OneDrive - Entain Group/backup/Desktop/UKGC/MGS/New folder/spring-core-3.2.17.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Anil.Chedepudi/OneDrive - Entain Group/backup/Desktop/UKGC/MGS/New folder/spring-expression-3.2.17.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
